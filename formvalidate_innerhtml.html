@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form action="">
+<h1>Sample Form</h1>
+<p id="demo"></p>
+ID: <input type="text" name="id" id="id"><br>
+<p id="demo1"></p>
+FirstName: <input type="text" name="fname" id="fname"><br>
+<p id="demo2"></p>
+LastName: <input type="text" name="lname" id="lname"><br>
+<button id="myBtn">Add</button>
+
+</form>
+<script>
+document.getElementById("myBtn").onclick = check;
+
+function check(){
+var x=document.getElementById("id").value;
+var y=document.getElementById("fname").value;
+var z=document.getElementById("lname").value;
+
+if(x=="" && y=="" && z=="")
+{
+document.getElementById("demo").innerHTML = "Please Enter an ID";
+document.getElementById("demo").style.color="red";
+document.getElementById("demo1").innerHTML = "Please Enter a First Name";
+document.getElementById("demo1").style.color="red";
+document.getElementById("demo2").innerHTML = "Please Enter a Last Name";
+document.getElementById("demo2").style.color="red";
+return false;
+}
+
+if(x=="")
+{
+document.getElementById("demo").innerHTML = "Please Enter an ID";
+document.getElementById("demo").style.color="red";
+return false;
+}
+if(y=="")
+{
+document.getElementById("demo1").innerHTML = "Please Enter a First Name";
+document.getElementById("demo1").style.color="red";
+return false;
+}
+if(z=="")
+{
+document.getElementById("demo2").innerHTML = "Please Enter a Last Name";
+document.getElementById("demo2").style.color="red";
+return false;
+}
+
+
+
+}
+
+</script>
+
+</body>
+</html>
